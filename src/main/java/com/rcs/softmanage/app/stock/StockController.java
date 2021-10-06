@@ -1,7 +1,6 @@
 package com.rcs.softmanage.app.stock;
 
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -15,10 +14,10 @@ public class StockController {
 		
 	}
 	
-	@GetMapping("/api/v1/stock/{id}")
-	public long getStock(@RequestBody long Id) {
+	@GetMapping("/{id}")
+	public long getStock(@RequestBody long id) {
 		
-		return Id;
+		return id;
 	}
 
 }

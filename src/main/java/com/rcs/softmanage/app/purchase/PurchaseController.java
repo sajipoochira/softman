@@ -15,10 +15,10 @@ public class PurchaseController {
 		
 	}
 	
-	@GetMapping("/api/v1/purchase/{id}")
-	public long getPurchase(@RequestBody long Id) {
+	@GetMapping("/{id}")
+	public long getPurchase(@RequestBody long id) {
 		
-		return Id;
+		return id;
 	}
 	@PostMapping
 	public Purchase addPurchase(@RequestBody Purchase purchase) {

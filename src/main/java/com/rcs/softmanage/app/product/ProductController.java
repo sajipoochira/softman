@@ -2,7 +2,7 @@ package com.rcs.softmanage.app.product;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -15,10 +15,10 @@ public class ProductController {
 		
 	}
 	
-	@GetMapping("/api/v1/product/{id}")
-	public long getProduct(@RequestBody long Id) {
-		
-		return Id;
+	@GetMapping("/{id}")
+	public String getProduct(@PathVariable long id) {
+		System.out.println(id);
+		return "working";
 	}
 	@PostMapping
 	public Product addProduct(@RequestBody Product product) {

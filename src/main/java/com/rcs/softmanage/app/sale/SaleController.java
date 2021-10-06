@@ -15,10 +15,10 @@ public class SaleController {
 		
 	}
 	
-	@GetMapping("/api/v1/sale/{id}")
-	public long getSale(@RequestBody long Id) {
+	@GetMapping("/{id}")
+	public long getSale(@RequestBody long id) {
 		
-		return Id;
+		return id;
 	}
 	@PostMapping
 	public Sale addSale(@RequestBody Sale sale) {
